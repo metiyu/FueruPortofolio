@@ -1,3 +1,5 @@
+'use client'
+
 import AboutSection from "@/components/about"
 import HeroSection from "@/components/hero"
 import ServicesSection from "@/components/services"
@@ -5,11 +7,13 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, BarChart3, Brain, Code, Database, Globe, Heart, Infinity, Layers, MessageSquare, Zap } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import CasesSection from '../components/cases';
+import ContactSection from "@/components/contact"
 
 export default function Home() {
     return (
         <div className="flex flex-col min-h-screen">
-            <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+            {/* <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
                 <div className="container flex h-16 items-center justify-between">
                     <div className="flex items-center gap-2">
                         <Layers className="h-6 w-6 text-primary" />
@@ -34,187 +38,18 @@ export default function Home() {
                     </nav>
                     <Button>Get Started</Button>
                 </div>
-            </header>
+            </header> */}
             <main className="flex-1">
                 <HeroSection></HeroSection>
                 <AboutSection></AboutSection>
                 <ServicesSection></ServicesSection>
-                <section id="case-studies" className="w-full py-12 md:py-24 lg:py-32 bg-white">
-                    <div className="container px-4 md:px-6">
-                        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                            <div className="space-y-2">
-                                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Case Studies</div>
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">Success Stories</h2>
-                                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                    See how we've helped businesses across industries achieve their goals through technology.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="grid grid-cols-1 gap-8 pt-12 md:grid-cols-2 lg:grid-cols-3">
-                            <div className="group relative overflow-hidden rounded-lg border shadow-sm">
-                                <Image
-                                    src="/placeholder.svg?height=300&width=400"
-                                    width={400}
-                                    height={300}
-                                    alt="Case Study 1"
-                                    className="object-cover w-full h-48"
-                                />
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold">Manufacturing Automation</h3>
-                                    <p className="text-gray-500 mt-2">
-                                        How we helped a manufacturing company increase efficiency by 40% through AI-powered automation.
-                                    </p>
-                                    <Link href="#" className="mt-4 inline-flex items-center text-sm font-medium text-primary">
-                                        Read case study <ArrowRight className="ml-1 h-4 w-4" />
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className="group relative overflow-hidden rounded-lg border shadow-sm">
-                                <Image
-                                    src="/placeholder.svg?height=300&width=400"
-                                    width={400}
-                                    height={300}
-                                    alt="Case Study 2"
-                                    className="object-cover w-full h-48"
-                                />
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold">Financial Services Transformation</h3>
-                                    <p className="text-gray-500 mt-2">
-                                        Transforming a traditional financial institution with digital solutions that improved customer
-                                        satisfaction by 65%.
-                                    </p>
-                                    <Link href="#" className="mt-4 inline-flex items-center text-sm font-medium text-primary">
-                                        Read case study <ArrowRight className="ml-1 h-4 w-4" />
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className="group relative overflow-hidden rounded-lg border shadow-sm">
-                                <Image
-                                    src="/placeholder.svg?height=300&width=400"
-                                    width={400}
-                                    height={300}
-                                    alt="Case Study 3"
-                                    className="object-cover w-full h-48"
-                                />
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold">Healthcare Analytics</h3>
-                                    <p className="text-gray-500 mt-2">
-                                        Implementing predictive analytics for a healthcare provider that led to 30% reduction in operational
-                                        costs.
-                                    </p>
-                                    <Link href="#" className="mt-4 inline-flex items-center text-sm font-medium text-primary">
-                                        Read case study <ArrowRight className="ml-1 h-4 w-4" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <CasesSection></CasesSection>
+                <ContactSection></ContactSection>
+                {/* 
 
-                <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-                    <div className="container px-4 md:px-6">
-                        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-                            <div className="flex flex-col justify-center space-y-4">
-                                <div className="space-y-2">
-                                    <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Contact Us</div>
-                                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                                        Let's Grow Your Business Together
-                                    </h2>
-                                    <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                        Ready to transform your business with technology? Get in touch with our team of experts today.
-                                    </p>
-                                </div>
-                                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                                    <Button size="lg" className="bg-primary hover:bg-primary/90">
-                                        Schedule a Consultation
-                                    </Button>
-                                </div>
-                                <div className="space-y-2 pt-4">
-                                    <div className="flex items-center gap-2">
-                                        <MessageSquare className="h-5 w-5 text-primary" />
-                                        <span className="text-gray-500">info@fuerutech.com</span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Globe className="h-5 w-5 text-primary" />
-                                        <span className="text-gray-500">www.fuerutech.com</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-center">
-                                <div className="w-full max-w-md space-y-4 rounded-lg border bg-white p-6 shadow-sm">
-                                    <div className="space-y-2">
-                                        <h3 className="text-xl font-bold">Send us a message</h3>
-                                        <p className="text-sm text-gray-500">
-                                            Fill out the form below and we'll get back to you as soon as possible.
-                                        </p>
-                                    </div>
-                                    <form className="space-y-4">
-                                        <div className="grid grid-cols-2 gap-4">
-                                            <div className="space-y-2">
-                                                <label
-                                                    htmlFor="first-name"
-                                                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                                >
-                                                    First name
-                                                </label>
-                                                <input
-                                                    id="first-name"
-                                                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                                    placeholder="Enter your first name"
-                                                />
-                                            </div>
-                                            <div className="space-y-2">
-                                                <label
-                                                    htmlFor="last-name"
-                                                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                                >
-                                                    Last name
-                                                </label>
-                                                <input
-                                                    id="last-name"
-                                                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                                    placeholder="Enter your last name"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label
-                                                htmlFor="email"
-                                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                            >
-                                                Email
-                                            </label>
-                                            <input
-                                                id="email"
-                                                type="email"
-                                                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                                placeholder="Enter your email"
-                                            />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label
-                                                htmlFor="message"
-                                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                            >
-                                                Message
-                                            </label>
-                                            <textarea
-                                                id="message"
-                                                className="flex min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                                placeholder="Enter your message"
-                                            ></textarea>
-                                        </div>
-                                        <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
-                                            Send Message
-                                        </Button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                 */}
             </main>
-            <footer className="w-full border-t bg-white py-6">
+            {/* <footer className="w-full border-t bg-white py-6">
                 <div className="container flex flex-col items-center justify-between gap-4 md:flex-row px-4 md:px-6">
                     <div className="flex items-center gap-2">
                         <Layers className="h-6 w-6 text-primary" />
@@ -262,7 +97,7 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
         </div>
     )
 }

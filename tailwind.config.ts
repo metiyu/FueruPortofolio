@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss"
-import { DEFAULT_CIPHERS } from "tls"
 
 const config = {
   darkMode: ["class"],
@@ -20,42 +19,31 @@ const config = {
     },
     extend: {
       colors: {
-        border: "#444444",
+        border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#121212",
+        "background-dark": "#111111",
+        "background-light": "#ffffff",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "#E0E0E0", // Deep blue as primary color
+        "primary-dark": {
+          DEFAULT: "#ffffff",
           foreground: "hsl(var(--primary-foreground))",
         },
-        secondary: {
-          DEFAULT: "#B0B0B0",
+        "secondary-dark": {
+          DEFAULT: "#bdbdbd",
           foreground: "hsl(var(--secondary-foreground))",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+        "primary-light": {
+          DEFAULT: "#111111",
+          foreground: "hsl(var(--primary-foreground))",
         },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+        "secondary-light": {
+          DEFAULT: "#767676",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         accent: {
-          DEFAULT: "#888888",
+          DEFAULT: "#fab54e",
           foreground: "hsl(var(--accent-foreground))",
-        },
-        button: {
-          DEFAULT: "#3B8ED0",
-          foreground: "hsl(var(--button-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
         },
       },
       borderRadius: {
@@ -77,9 +65,24 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      boxShadow: {
+        // Your custom shadow
+        'shown': `
+          rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+          rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+          rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset
+        `,
+        'pressed': `
+          0px 2px 6px rgba(0, 0, 0, 0.2) inset,
+          0px 4px 8px rgba(0, 0, 0, 0.1)
+        `,
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    // Remove this line if you don't have tailwindcss-animate installed
+    // require("tailwindcss-animate")
+  ],
 } satisfies Config
 
 export default config

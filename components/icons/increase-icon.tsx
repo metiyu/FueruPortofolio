@@ -4,8 +4,12 @@
 import { forwardRef } from 'react';
 import LordIconBase, { LordIconHandle } from './lord-icon-base';
 
-const IncreaseIcon = forwardRef<LordIconHandle>((props, ref) => {
-  return <LordIconBase ref={ref} iconName="increase" />;
+type IncreaseIconProps = {
+    color: string;
+};
+
+const IncreaseIcon = forwardRef<LordIconHandle, IncreaseIconProps>(({ color }, ref) => {
+  return <LordIconBase ref={ref} iconName="increase" color={color}/>;
 });
 
 IncreaseIcon.displayName = 'IncreaseIcon';

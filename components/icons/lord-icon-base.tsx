@@ -3,6 +3,7 @@
 
 import { forwardRef, useRef, useEffect, useState } from 'react';
 import { Player } from '@lordicon/react';
+import { cp } from 'fs';
 
 export type LordIconHandle = {
     playFromBeginning: () => void;
@@ -11,9 +12,10 @@ export type LordIconHandle = {
 type LordIconProps = {
     iconName: string; // e.g. "heart", "bolt"
     size?: number;
+    color: string;
 };
 
-const LordIconBase = forwardRef<LordIconHandle, LordIconProps>(({ iconName, size = 32 }, ref) => {
+const LordIconBase = forwardRef<LordIconHandle, LordIconProps>(({ iconName, size = 48, color }, ref) => {
     const playerRef = useRef<any>(null);
     const [data, setData] = useState<any>(null);
 
@@ -42,6 +44,7 @@ const LordIconBase = forwardRef<LordIconHandle, LordIconProps>(({ iconName, size
                 ref={playerRef}
                 icon={data}
                 size={size}
+                colors={color}
             />
         </div>
     );

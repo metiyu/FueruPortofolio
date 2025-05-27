@@ -4,8 +4,12 @@
 import { forwardRef } from 'react';
 import LordIconBase, { LordIconHandle } from './lord-icon-base';
 
-const BoltIcon = forwardRef<LordIconHandle>((props, ref) => {
-    return <LordIconBase ref={ref} iconName="bolt" />;
+type BoltIconProps = {
+    color: string;
+};
+
+const BoltIcon = forwardRef<LordIconHandle, BoltIconProps>(({ color }, ref) => {
+    return <LordIconBase ref={ref} iconName="bolt" color={color} />;
 });
 
 BoltIcon.displayName = 'BoltIcon';

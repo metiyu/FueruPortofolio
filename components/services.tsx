@@ -4,7 +4,7 @@ import AnimationOnScroll from "./animation-on-scroll"
 
 export default function ServicesSection() {
     return (
-        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-background relative">
+        <section id="services" className="w-full py-12 md:py-18 lg:py-24 bg-background-dark relative">
             {/* Subtle background accent */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-primary/2 rounded-full blur-3xl"></div>
@@ -20,9 +20,7 @@ export default function ServicesSection() {
                             duration={3000}
                             delay={100}
                         >
-                            <div className="inline-block rounded-lg bg-button px-3 py-1 text-sm text-primary">
-                                Our Services
-                            </div>
+                            <div className="inline-block rounded-lg px-3 text-sm text-secondary-dark md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">Our Services</div>
                         </AnimationOnScroll>
 
                         {/* Main Heading */}
@@ -32,7 +30,7 @@ export default function ServicesSection() {
                             duration={3000}
                             delay={200}
                         >
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary pb-1">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary-dark pb-1">
                                 Comprehensive Technology Solutions
                             </h2>
                         </AnimationOnScroll>
@@ -44,7 +42,7 @@ export default function ServicesSection() {
                             duration={3000}
                             delay={300}
                         >
-                            <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            <p className="max-w-[900px] text-secondary-dark md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                 We offer a wide range of services designed to help businesses leverage technology for growth and
                                 efficiency.
                             </p>
@@ -54,70 +52,89 @@ export default function ServicesSection() {
 
                 {/* Services Grid */}
                 <div className="grid grid-cols-1 gap-6 pt-20 md:grid-cols-2 lg:grid-cols-3">
-                    {/* AI-Powered Solutions */}
-                    <AnimationOnScroll
-                        animationType="luxury-fade"
-                        intensity="medium"
-                        duration={3000}
-                        delay={400}
-                    >
-                        <div className="m-2 group relative rounded-lg border-4 bg-background shadow-sm transition-all duration-1000 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1">
-                            <div className="p-6">
-                                <div className="mb-4 transition-transform duration-1000 group-hover:scale-110 group-hover:translate-x-4">
-                                    <Brain className="h-10 w-10 text-primary" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-2 text-primary">AI-Powered Solutions</h3>
-                                <p className="text-gray-500 mb-4">
-                                    Leverage the power of artificial intelligence to automate processes, gain insights, and make
-                                    data-driven decisions.
-                                </p>
-                            </div>
-                            {/* Subtle hover accent */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/2 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                        </div>
-                    </AnimationOnScroll>
-
-                    {/* Digital Transformation */}
-                    <AnimationOnScroll
-                        animationType="luxury-fade"
-                        intensity="medium"
-                        duration={3000}
-                        delay={500}
-                    >
-                        <div className="m-2 group relative overflow-hidden rounded-lg border-4 bg-background shadow-sm transition-all duration-1000 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1">
-                            <div className="p-6">
-                                <div className="mb-4 transition-transform duration-1000 group-hover:scale-110 group-hover:translate-x-4">
-                                    <Database className="h-10 w-10 text-primary" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-2 text-primary">Digital Transformation</h3>
-                                <p className="text-gray-500 mb-4">
-                                    Transform your business with digital technologies to improve efficiency, enhance customer
-                                    experience, and drive growth.
-                                </p>
-                            </div>
-                            {/* Subtle hover accent */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/2 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                        </div>
-                    </AnimationOnScroll>
-
-                    {/* Custom Software Development */}
                     <AnimationOnScroll
                         animationType="luxury-fade"
                         intensity="medium"
                         duration={3000}
                         delay={600}
                     >
-                        <div className="m-2 group relative overflow-hidden rounded-lg border-4 bg-background shadow-sm transition-all duration-1000 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1">
-                            <div className="p-6">
-                                <div className="mb-4 transition-transform duration-1000 group-hover:scale-110 group-hover:translate-x-4">
-                                    <Code className="h-10 w-10 text-primary" />
+                        <div className="m-2 group relative overflow-hidden rounded-lg bg-background shadow-sm transition-all duration-1000 ease-in-outhover:shadow-pressed hover:shadow-pressed hover:scale-[0.99] hover:translate-y-0">
+                            <div className="p-6 flex flex-col">
+                                {/* Icon container with hover animation */}
+                                <div className="rounded-full mb-4 p-3 bg-primary/10 text-primary transition-transform duration-700 group-hover:scale-90 group-hover:-translate-x-4">
+                                    <Brain className="h-10 w-10 text-primary-dark" />
                                 </div>
-                                <h3 className="text-xl font-bold mb-2 text-primary">Custom Software Development</h3>
-                                <p className="text-gray-500 mb-4">
+
+                                {/* Title */}
+                                <h3 className="text-xl font-bold mb-2 text-primary-dark">
+                                    AI-Powered Solutions
+                                </h3>
+
+                                {/* Description */}
+                                <p className="text-secondary-dark mb-4">
+                                    Leverage the power of artificial intelligence to automate processes, gain insights, and make data-driven decisions.
+                                </p>
+                            </div>
+
+                            {/* Subtle hover accent (glow overlay) */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/2 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                        </div>
+                    </AnimationOnScroll>
+
+                    <AnimationOnScroll
+                        animationType="luxury-fade"
+                        intensity="medium"
+                        duration={3000}
+                        delay={600}
+                    >
+                        <div className="m-2 group relative overflow-hidden rounded-lg bg-background shadow-sm transition-all duration-1000 ease-in-outhover:shadow-pressed hover:shadow-pressed hover:scale-[0.99] hover:translate-y-0">
+                            <div className="p-6 flex flex-col">
+                                {/* Icon container with hover animation */}
+                                <div className="rounded-full mb-4 p-3 bg-primary/10 text-primary transition-transform duration-700 group-hover:scale-90 group-hover:-translate-x-4">
+                                    <Database className="h-10 w-10 text-primary-dark" />
+                                </div>
+
+                                {/* Title */}
+                                <h3 className="text-xl font-bold mb-2 text-primary-dark">
+                                    Digital Transformation
+                                </h3>
+
+                                {/* Description */}
+                                <p className="text-secondary-dark mb-4">
+                                    Transform your business with digital technologies to improve efficiency, enhance customer experience, and drive growth.
+                                </p>
+                            </div>
+
+                            {/* Subtle hover accent (glow overlay) */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/2 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                        </div>
+                    </AnimationOnScroll>
+
+                    <AnimationOnScroll
+                        animationType="luxury-fade"
+                        intensity="medium"
+                        duration={3000}
+                        delay={600}
+                    >
+                        <div className="m-2 group relative overflow-hidden rounded-lg bg-background shadow-sm transition-all duration-1000 ease-in-outhover:shadow-pressed hover:shadow-pressed hover:scale-[0.99] hover:translate-y-0">
+                            <div className="p-6 flex flex-col">
+                                {/* Icon container with hover animation */}
+                                <div className="rounded-full mb-4 p-3 bg-primary/10 text-primary transition-transform duration-700 group-hover:scale-90 group-hover:-translate-x-4">
+                                    <Code className="h-10 w-10 text-primary-dark" />
+                                </div>
+
+                                {/* Title */}
+                                <h3 className="text-xl font-bold mb-2 text-primary-dark">
+                                    Custom Software Development
+                                </h3>
+
+                                {/* Description */}
+                                <p className="text-secondary-dark mb-4">
                                     Build tailored software solutions that address your specific business needs and challenges.
                                 </p>
                             </div>
-                            {/* Subtle hover accent */}
+
+                            {/* Subtle hover accent (glow overlay) */}
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/2 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
                         </div>
                     </AnimationOnScroll>
