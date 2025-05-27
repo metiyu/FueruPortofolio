@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import { DEFAULT_CIPHERS } from "tls"
 
 const config = {
   darkMode: ["class"],
@@ -19,17 +20,17 @@ const config = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
+        border: "#444444",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: "#121212",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0a2463", // Deep blue as primary color
+          DEFAULT: "#E0E0E0", // Deep blue as primary color
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#B0B0B0",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -41,8 +42,12 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "#888888",
           foreground: "hsl(var(--accent-foreground))",
+        },
+        button: {
+          DEFAULT: "#3B8ED0",
+          foreground: "hsl(var(--button-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
