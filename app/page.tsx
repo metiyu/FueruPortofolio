@@ -9,6 +9,8 @@ import Image from "next/image"
 import Link from "next/link"
 import CasesSection from '../components/cases';
 import ContactSection from "@/components/contact"
+import CarouselComponent from "@/components/technology"
+import ResponsiveCarousel from "@/components/logo-carousel"
 
 export default function Home() {
     return (
@@ -40,11 +42,13 @@ export default function Home() {
                 </div>
             </header> */}
             <main className="flex-1">
-                <HeroSection></HeroSection>
+                {/* <HeroSection></HeroSection>
                 <AboutSection></AboutSection>
                 <ServicesSection></ServicesSection>
                 <CasesSection></CasesSection>
-                <ContactSection></ContactSection>
+                <ContactSection></ContactSection> */}
+                {/* <CarouselComponent></CarouselComponent> */}
+                <ResponsiveCarousel></ResponsiveCarousel>
                 {/* 
 
                  */}
