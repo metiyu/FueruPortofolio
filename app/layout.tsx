@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Script from 'next/script'
 import VantaScriptLoader from '@/components/vanta-script-loader'
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
     title: 'v0 App',
@@ -24,7 +26,11 @@ export default function RootLayout({
                 />
                 <VantaScriptLoader />
             </head>
-            <body>{children}</body>
+            <body>
+                {children}
+                <Analytics />
+                <SpeedInsights />
+            </body>
         </html>
     )
 }
