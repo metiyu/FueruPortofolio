@@ -7,19 +7,19 @@ import AnimationOnScroll from './animation-on-scroll'; // Adjust path as needed
 export default function CasesSection() {
     const caseStudies = [
         {
-            title: 'Manufacturing Automation',
-            description: 'How we helped a manufacturing company increase efficiency by 40% through AI-powered automation.',
-            image: '/placeholder.svg?height=300&width=400',
+            title: 'Face Recognition Intelligence',
+            description: 'Our advanced facial recognition technology delivers secure, seamless identity verification across industries. Whether securing office access or ensuring integrity in online exams, our solution reduces fraud, speeds up processes, and enhances user experience with fast, accurate biometric authentication.',
+            image: 'https://learn.g2.com/hubfs/G2CM_FI454_Learn_Article_Images_%5BFacial_recognition%5D_V1a-1.png',
         },
         {
             title: 'Financial Services Transformation',
-            description: 'Transforming a traditional financial institution with digital solutions that improved customer satisfaction by 65%.',
-            image: '/placeholder.svg?height=300&width=400',
+            description: 'Integrated monitoring and analytics transform financial operations into a transparent, compliant, and risk-aware ecosystem. From sales to collections, every process is optimized for efficiency—ensuring smarter decisions, smoother workflows, and sustainable growth.',
+            image: 'https://www.salesforce.com/au/blog/wp-content/uploads/sites/4/2024/08/AdobeStock_585593306_e540f8.jpeg?w=892',
         },
         {
             title: 'Healthcare Analytics',
-            description: 'Implementing predictive analytics for a healthcare provider that led to 30% reduction in operational costs.',
-            image: '/placeholder.svg?height=300&width=400',
+            description: 'Real-time queue monitoring and intelligent scheduling bring calm and clarity to healthcare services. Patients enjoy shorter wait times and timely notifications, while providers achieve better resource management—creating a more humane, stress-free, and efficient healthcare experience.',
+            image: 'https://images.yourstory.com/cs/3/5739db30-22e7-11e9-9aaa-0334d2a19842/Health-care-feature-img11552902492870.png?mode=crop&crop=faces&ar=2%3A1&format=auto&w=1920&q=75',
         },
     ];
 

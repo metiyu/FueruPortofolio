@@ -14,7 +14,7 @@ export default function HeroSection() {
     useVantaDots(vantaRef);
 
     return (
-        <section ref={vantaRef} className="w-full rotate-180 py-12 md:py-12 lg:py-24 xl:py-36 bg-background-dark relative">
+        <section ref={vantaRef} className="w-full rotate-180 py-12 md:py-48 lg:py-48 xl:py-56 bg-background-dark relative">
             <div className="rotate-180">
                 {/* Subtle background accent - minimalist */}
                 <div className="absolute inset-0 overflow-hidden">
@@ -79,7 +79,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Right Column - Hero Image */}
-                        <div className="flex items-center justify-center">
+                        {/* <div className="flex items-center justify-center">
                             <AnimationOnScroll
                                 animationType="luxury-fade"
                                 intensity="medium"
@@ -95,11 +95,10 @@ export default function HeroSection() {
                                         className="rounded-lg object-cover transition-all duration-500 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"
                                     />
 
-                                    {/* Subtle premium overlay */}
                                     <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/5 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
                             </AnimationOnScroll>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Minimal floating accents - very subtle */}

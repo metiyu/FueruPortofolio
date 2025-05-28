@@ -1,0 +1,92 @@
+.sliderContainer {
+    height: 100vh;
+    width: 20vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #0f172a; */
+    /* dark background */
+}
+
+.sliderTrack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    will-change: transform;
+}
+
+/* Remove the keyframe animation since we're using JavaScript */
+
+/* Keyframe animation removed - now handled by JavaScript for smooth pause/resume */
+
+@keyframes shine {
+    0% {
+        top: -50%;
+    }
+
+    50% {
+        top: 100%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.icon {
+    --size: 7vw;
+    --transition-duration: 500ms;
+    --transition-easing: ease-out;
+    --foreground-color: white;
+
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--foreground-color);
+    font-size: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    border-radius: 0.5rem;
+    box-shadow: 0px calc(var(--size) / 6) calc(var(--size) / 3) rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-duration) var(--transition-easing);
+    overflow: hidden;
+    position: relative;
+}
+
+.icon::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.4);
+    width: 60%;
+    height: 100%;
+    top: 0;
+    left: -125%;
+    transform: skew(45deg);
+    position: absolute;
+    transition: left var(--transition-duration) var(--transition-easing);
+}
+
+.icon:hover {
+    --transition-duration: 500ms;
+    --transition-easing: ease-out;
+    transform: translateY(-25%);
+    transition: transform var(--transition-duration) var(--transition-easing);
+}
+
+.icon:hover::before {
+    left: 150%;
+}
+
+.icon img {
+    width: 5vw;
+    height: 5vw;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* Remove the container hover effects since we're handling individual icon hovers */

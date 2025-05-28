@@ -5,7 +5,7 @@ import AnimationOnScroll from "./animation-on-scroll";
 
 export default function ContactSection() {
     return (
-        <section id="contact" className="w-full py-12 md:py-16 lg:py-18 bg-background-dark">
+        <section id="contact" className="w-full py-12 md:py-16 lg:py-18 bg-background-light">
             <div className="container px-4 md:px-6">
                 <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
                     {/* Left Column - Text + CTA */}
@@ -13,13 +13,13 @@ export default function ContactSection() {
                         {/* Animated Header */}
                         <AnimationOnScroll animationType="luxury-fade" intensity="medium" duration={1000} delay={200}>
                             <div className="space-y-2">
-                                <div className="inline-block rounded-lg py-1 text-sm text-secondary-dark md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                <div className="inline-block rounded-lg py-1 text-sm text-secondary-light md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                     Contact Us
                                 </div>
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary-dark">
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary-light">
                                     Let's Grow Your Business Together
                                 </h2>
-                                <p className="max-w-[600px] text-secondary-dark md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                <p className="max-w-[600px] text-secondary-light md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                     Ready to transform your business with technology? Get in touch with our team of experts today.
                                 </p>
                             </div>
@@ -41,12 +41,12 @@ export default function ContactSection() {
                         <AnimationOnScroll animationType="luxury-fade" intensity="medium" duration={1000} delay={600}>
                             <div className="space-y-2 pt-4">
                                 <div className="flex items-center gap-2">
-                                    <MessageSquare className="h-5 w-5 text-primary-dark" />
-                                    <span className="text-secondary-dark">inquiry@fuerutech.com</span>
+                                    <MessageSquare className="h-5 w-5 text-primary-light" />
+                                    <span className="text-secondary-light">inquiry@fuerutech.com</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Globe className="h-5 w-5 text-primary-dark" />
-                                    <span className="text-secondary-dark">www.fuerutech.com</span>
+                                    <Globe className="h-5 w-5 text-primary-light" />
+                                    <span className="text-secondary-light">www.fuerutech.com</span>
                                 </div>
                             </div>
                         </AnimationOnScroll>
@@ -73,7 +73,7 @@ export default function ContactSection() {
                                             <input
                                                 id="first-name"
                                                 placeholder="Enter your first name"
-                                                className="flex h-10 w-full rounded-md border border-input bg-background-dark px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2"
+                                                className="flex h-10 w-full rounded-md border border-input bg-background-light px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2"
                                             />
                                         </div>
                                         <div className="space-y-2">
@@ -83,7 +83,7 @@ export default function ContactSection() {
                                             <input
                                                 id="last-name"
                                                 placeholder="Enter your last name"
-                                                className="flex h-10 w-full rounded-md border border-input bg-background-dark px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2"
+                                                className="flex h-10 w-full rounded-md border border-input bg-background-light px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2"
                                             />
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@ export default function ContactSection() {
                                             id="email"
                                             type="email"
                                             placeholder="Enter your email"
-                                            className="flex h-10 w-full rounded-md border border-input bg-background-dark px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2"
+                                            className="flex h-10 w-full rounded-md border border-input bg-background-light px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2"
                                         />
                                     </div>
                                     <div className="space-y-2">
@@ -105,7 +105,7 @@ export default function ContactSection() {
                                         <textarea
                                             id="message"
                                             placeholder="Enter your message"
-                                            className="flex min-h-[100px] w-full rounded-md border border-input bg-background-dark px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2"
+                                            className="flex min-h-[100px] w-full rounded-md border border-input bg-background-light px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2"
                                         ></textarea>
                                     </div>
                                     <Button type="submit" className="w-full bg-primary hover:bg-primary/90">

@@ -11,10 +11,12 @@ import CasesSection from '../components/cases';
 import ContactSection from "@/components/contact"
 import CarouselComponent from "@/components/technology"
 import ResponsiveCarousel from "@/components/logo-carousel"
+import VerticalSlider from "@/components/vertical-slider"
+import TechnologySection from '../components/technology';
 
 export default function Home() {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen bg-primary-light">
             {/* <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
                 <div className="container flex h-16 items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -42,13 +44,15 @@ export default function Home() {
                 </div>
             </header> */}
             <main className="flex-1">
-                {/* <HeroSection></HeroSection>
+                <HeroSection></HeroSection>
                 <AboutSection></AboutSection>
                 <ServicesSection></ServicesSection>
                 <CasesSection></CasesSection>
-                <ContactSection></ContactSection> */}
+                <TechnologySection></TechnologySection>
+                <ContactSection></ContactSection>
                 {/* <CarouselComponent></CarouselComponent> */}
-                <ResponsiveCarousel></ResponsiveCarousel>
+                {/* <ResponsiveCarousel></ResponsiveCarousel> */}
+                
                 {/* 
 
                  */}
